@@ -1,0 +1,39 @@
+//********************DAR FORMATO A ELEMENTOS HTML***************************//
+
+Selector de elementos:
+	Coincide directamente con el nombre de un elemento HTML. 
+
+
+Puedes determinar multiples selectores a la vez, separandolos con una coma.
+
+//***************Añadir una clase***********************//
+
+Se puede determinar una clase creando un selector que comience con un caracter de punto final.
+
+cuando se encuentra algo asi: 
+
+	li.special
+
+Significa: 
+	Aplicarle los cambio a cualquier elemento li que tenga una clase special
+
+//***************Dar formato según la ubicacion en un documento***********************//
+
+Hay un selector llamado COMBINADOR DESCENDENTE, que simplemente toma la forma de un espacio entre otros dos selectores. 
+
+Este selector separará cualquier elemento <em> que este dentro de (un descendente) <li>. 
+
+hay un selector llamado COMBINADOR HERMANO ADYACENTE que es simplemente seleccionar un elemento que venga directamente despues de otro, los dos tienen que tener el mismo nivel de jerarquia.
+
+ejemplo: 
+	h1 + p 
+
+	al parrafo <p> que venga inmediatamente despues de un <h1> apliquele los cambios.
+
+//***************Dar formato según el estado***********************//
+
+Por ejemplo, el elemento <a> tiene diferentes estados dependiendo de si se visita o no, se pasa por encima, se presiona con el teclado o se hace clic (se activa). 
+
+	* Link : el estado normal del ancla (que no han sido visitados)
+	* visited : en este estado ya se clickeo sobre el link
+	* Hover : Se trata de pasar el mouse sobre el link sin darle click.
