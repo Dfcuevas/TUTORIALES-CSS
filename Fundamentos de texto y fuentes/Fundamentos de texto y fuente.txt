@@ -1,0 +1,76 @@
+//*********************TAMAÑO DE LA LETRA******************************//
+
+El tamaño del tipo de letra (establecido con la propiedad font-size) puede tomar valores medidos en la mayoria de estas unidades (y en otras, como porcentajes). Sin embargo, las unidades mas comunes que vas a usar para ajustar el tamaño del texto son: 
+
+	* Unidades px (pixeles): El numero de pixeles de altura que desees que tenga el texto. Esta es una unidad absoluta, da como resultado el mismo valor calculado final para el tipo de letra en la pagina en casi cualquier situacion.
+
+	* Unidades em: 1em equivale al tamaño de tipo de letra que se haya establecido en el elemento padre del elemento activo al que aplicamos estilo (más especificamente, el ancho de una letra M mayuscula contenida dentro del elemento padre). Esto puede ser complejo de resolver si hay muchos elementos anidados con diferentes tamaños de tipo de letra establecidos, pero es factible, como vera a continuacion. Pero ¿Para que molestarse en ello?.
+Porque resulta bastante natural una vez que te acostumbras a ello, y puede usar unidades em para establecer el tamaño de todo, no solo del texto. Puedes tener un sitio web completo dimensionado con unidades em, lo que facilita su mantenimiento.
+
+	* Unidades rem: Funcionan igual que las unidades em, excepto que 1rem equivale al tamaño del tipo de letra establecido en el elemento raiz del documento (es decir, en html), no en el elemento padre. Esto facilita mucho los calculos de los tamaños del tipo de letra, aunque te puede dar mucha guerra si quieres incluir navegadores que ya son muy antiguis porque las versiones de IE8 y anteriores no admiten la unidad rem. Si necesitas tener en cuenta navegadores más antiguos para tu proyecto, puede seguir utilizando unidades em o px, o usar un polyfill como REM-unit-polyfill.
+
+//************************TEXTOS SOMBREADOS******************************//
+
+
+Puedes aplicar sombras a tus textos con la propiedad text-shadow. Esta propiedad puede tomar hasta cuatro valores, como se muestra en ejemplo siguiente: 
+
+		* text-shadow: 1px 1px 1px red;
+
+las cuatro propiedades son las siguiente: 
+
+	1. El desplazamiento horizontal de la sombra desde el texto original; admite la mayoria de las unidades y magnitudes con las que cuenta CSS, pero lo mas habitual es usar px. Es un valor obligatorio.
+
+
+	2. El desplazamiento vertical de la sombra desde el texto original; se comporta basicamente igual que el desplazamiento horizontal, excepto por que mueve la sombra en sentido arriba/abajo y no en sentido derecha/izquierda. Es un valor obligatorio.
+
+	3. El radio de desenfoque; cuanto mas alto es este valor, mayor es la dispersion de la sombra. Si no se incluye este valor, el valor por defecto es 0, y no hay desenfoque. Esta propiedad admite la mayoria de las unidades y magnitudes de que dispone el CSS. 
+
+	4. El color de base de la sombra, que admite cualquier unidad de color de que dispone CSS. Si no se incluye este valor, el valor por predeterminado es negro. 
+
+NOTA//: Los valores con desplazamiento positivo mueven la sombra hacia la derecha o hacia abajo.
+	Los valores con desplazamiento negativo mueven la sombra hacia la izquierda o hacia arriba.
+
+
+
+//************************ALINEACION DEL TEXTO******************************//
+
+La propiedad text-align se usa para controlar la forma en que el texto se alinea dentro de la caja que lo contiene. 
+
+//************************ESPACIO ENTRE LETRAS Y ESPACIO ENTRE PALABRAS******************************//
+
+Las propiedades letter-spacing y word-spacing te permiten establecer el espacio entre las letras y entre palabras del texto. 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

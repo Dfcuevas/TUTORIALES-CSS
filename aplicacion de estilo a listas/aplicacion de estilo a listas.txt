@@ -1,0 +1,14 @@
+//***************************USO DEL ESPACIADO DE LA LISTA*****************************//
+
+Al diseñar listas, es necesario ajustar el diseño para que mantengan los mismos espaciados verticales (a veces denominados ritmos verticales) que el resto de elementos circundantes, como parrafos e imagenes; y el mismo espaciado horizontal entre uno y otro.
+
+//************************CONTROL DE NUMERACION DE LAS LISTAS**********************//
+
+START
+	El atributo start te permite empezar la numeracion de la lista en un numero diferente de 1.
+
+REVERSED
+	Empieza la lista contando hacia atras, en lugar de hacia adelante.
+
+VALUE 
+	Permite establecer para tus elementos de lista unos valores numericos especificos. 

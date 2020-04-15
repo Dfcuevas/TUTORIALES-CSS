@@ -20,3 +20,6 @@ ESPECIFICIDAD:
 LAS FUNCIONES.
 
 Un ejemplo seria la funcion calc().Esta funcion te permite hacer operaciones matematicas sencillas desde tu CSS. 
+
+
+

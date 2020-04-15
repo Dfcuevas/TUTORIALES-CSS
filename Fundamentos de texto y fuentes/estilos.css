@@ -1,0 +1,10 @@
+.interlineado {
+  border: 1px solid blue;
+  line-height: 2;
+}
+
+.spaceado {
+  letter-spacing: 2px; 
+  word-spacing: 4px;
+  border: 1px solid green;
+}
