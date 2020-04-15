@@ -1,0 +1,22 @@
+//*********************SELECTORES****************//
+
+Un selector es, como determinamos, un elemento de nuestro documento HTML para aplicarle estilo. Si los estilos no se aplican correctamente, es problable que el selector no coincida con lo que crees que deberia coincidir. 
+
+Cada regla CSS comienza con un selector o una lista de selectores que indican al navegador a que elemento o elementos deben apliarse dichas reglas. 
+
+//*********************ESPECIDICIDAD****************//
+
+Digamos que en nuestro documento HTML hay un parrafo con una clase .special. Ambas reglas podrian aplicarse? cual ganaria?
+
+El lenguaje CSS tiene reglas para controlar cual ganara en caso de colision; reciben el nombre de CASCADA y ESPECIFICIDAD.
+
+CASCADA: 
+	La declaracion que aparece mas adelante en la hoja de estilo, y los estilos posteriores anulan a los anteriores. (tratandose del mismo tipo de selectores).
+
+ESPECIFICIDAD:
+	Una clase se describe de forma mas especifica o con mas especificidad que el selector de elementos, razon por la cual, aunque se defina antes que el selector de elementos, gana.
+
+
+LAS FUNCIONES.
+
+Un ejemplo seria la funcion calc().Esta funcion te permite hacer operaciones matematicas sencillas desde tu CSS. 
