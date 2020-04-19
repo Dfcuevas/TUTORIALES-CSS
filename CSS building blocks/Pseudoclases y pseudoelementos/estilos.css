@@ -18,7 +18,11 @@ p {
   font-size: 1.6rem;
   line-height: 1.5;
 }
-#h2line {
+code {
+  background-color: rgb(199, 199, 199);
+  padding: 2px;
+}
+.h2line {
   display: inline-block;
   border-bottom: 3px  solid rgb(115, 68, 228);
 }
@@ -28,4 +32,59 @@ p {
   display: block;
   padding: 20px;
   border-left: 5px solid rgb(115, 68, 228);
+}
+#span-style code {
+  background-color: #eee;
+}
+div[class*="ejemplo"] {
+  border: 1px solid black;
+  padding: 15px; 
+}
+.ejemplo1 article p:first-of-type{ 
+  text-decoration: underline;
+}
+
+.ejemplo1 h3 {
+  text-align: center;
+  font-size: 300%;
+}
+
+.nota {
+  padding: 5px 5px 5px 25px;
+  border-left: 5px solid #f6b73c;
+  background-color: hsl(40, 60%, 83%);
+  max-width: 700px;
+}
+.ejemplo2 {
+  margin-bottom: 15px;
+}
+.ejemplo2 article p:first-line {
+  font-size: 120%;
+  font-weight: bold;
+}
+
+.ejemplo2 article p:first-child::first-line {
+  color: red;
+}
+
+
+
+.ejemplo3 .box::before {
+  content: 'This should show before the other content. ';
+  color: green;
+}
+
+.ejemplo3 .box::after {
+  content: ' This should show after the other content.';
+  color: blue;
+}
+
+.ejemplo4 .box2::before {
+  content: '';
+  display: block;
+  width: 100px;
+  height: 100px;
+  background-color: rebeccapurple;
+  margin: 0 auto;
+  border: 1px solid black;
 }

@@ -15,7 +15,7 @@
 
   <p>El conjunto de selectores que estudiaremos en este articulo se conocen como <strong>pseudoclases y pseudoelementos</strong>. Hay muchos y a menudo sirven apra fines muy especificos. Una vez que sepas como usarlos, puedes echar un vistazo a la lista para ver si alguno sirve para la pagina que quieras crear. Una vez ams, la pagina correspondiente de MDN resulta muy util para conocer que navegadores los admiten o no.</p>
 
-  <h2 id="h2line">Que es una pseudoclase?</h2>
+  <h2 class="h2line">Que es una pseudoclase?</h2>
 
   <p>Una pseudoclase es un selector que marca los elementos que estan en un estado especifico, por ejemplo, los que son el primer elemento de su tipo, o aquellos por los que el cursor les pasa por encima. Tienden a actuar como si hubieras aplicado una clase en una parte determinada del documentos y, a menudo, ayudan a reducir el exceso de clases y proporcionan un marcado mas flexible y facil de entender.</p>
 
@@ -23,6 +23,73 @@
 
   <span id="span-style"><code><em>:pseudo-class-name</em></code></span>
 
+  <h2 class="h2line">Ejemplos simples de pseudoclases</h2>
+
+  <p>Echemos un vistazo a algunos ejemplos. si queremos el primer parrafo de un articulo en letra mas grande y en negrita, podemos añadir una clase a ese parrafo y luego añadirle CSS a esa clase, como se muestra en este ejemplo</p>
+
+  <div class="ejemplo1">
+    <article>
+      <h3>Ejemplo 1.</h3>
+    
+      <p>Veggies es bonus vobis, proinde vos postulo essum magis kohlrabi welsh onion daikon amaranth tatsoi tomatillo
+              melon azuki bean garlic.</p>
+  
+      <p>Gumbo beet greens corn soko endive gumbo gourd. Parsley shallot courgette tatsoi pea sprouts fava bean collard
+              greens dandelion okra wakame tomato. Dandelion cucumber earthnut pea peanut soko zucchini.</p>
+  </article>
+  </div>
+
+  <p>Sin embargo, podria ser complicado de mantener. ¿Y si añadiesemos un parrafo nuevo en la parte superior del documento? Habria que mover la clase para que quede antes del nuevo parrafo. En lugar de añadir la clase, podriamos utilizar el selector de pseudoclase <code>:first-child</code>, que siempre seleccionara el primer elemento hijo del articulo, y de esta forma no tendremos que editar el codigo HTML </p>
+
+  <p>Todas las pseudoclases se comportan del mismo modo. seleccionan un fragmento del documento que esta en un estado determinado y se comportan como si se hubiera añadido una clase a su HTML.</p>
+
+  <h2 class="h2line">¿Qué es un pseudoelemnto?</h2>
+
+  <p>Los pseudoelementos se comportan de manera similar. Sin embargo, actuan como si hubieras añadido un elemento HTML totalmente nuevo en el marcado, en lugar de haber aplicado una clase nueva a los elementos presentes. Los pseudoelementos empiezan con un doble signo de dos puntos <code>::</code></p>
+
+  <span id="span-style"><code><em>::pseudo-element-name</em></code></span>
+
+  <p class="nota"><strong>Nota</strong>: Algunos de los primeros pseudoelementos utilizaban la sintaxis de un solo signo de dos puntos, asi que pueed eser que en ocaciones los veas escritos de esta forma en algunos codigos, o ejemplos. Los navegadores modernos leen tanto los pseudoelementos con la sintaxis de los dos puntos simple como la de los dos puntos doble gracias a la compatibilidad retrospectiva.</p>
+
+  <p>Por ejemplo, si deseas seleccionar la primera linea de un parrafo simplemente puedes delimitarlo con el elemento <code>span</code> y utilizar un selector de elementos. Sin embargo, fallara si el numero de palabras que has delimitado resulta ser mas largo o mas corto que el anchyo del elemento padre. Ya que no sabemos cuantas palabras caben en una linea porque esto cambia con el ancho de la pantalla o con los cambios de tamaño de la letra, no es posible hacer esto introduciendo solo HTML</p>
+
+  <p>El pseudoelemento <code>::first-line</code> soluciona este problema: no importa si el numero de palabras aumenta o disminute, siempre se selecciona la primera linea.</p>
+
+  <div class="ejemplo2">
+    <article>
+      <p>Veggies es bonus vobis, proinde vos postulo essum magis kohlrabi welsh onion daikon amaranth tatsoi tomatillo
+              melon azuki bean garlic.</p>
+  
+      <p>Gumbo beet greens corn soko endive gumbo gourd. Parsley shallot courgette tatsoi pea sprouts fava bean collard
+              greens dandelion okra wakame tomato. Dandelion cucumber earthnut pea peanut soko zucchini.</p>
+  </article>
+  </div>
+
+  <h2 class="h2line">Combinar pseudoclases y pseudoelementos</h2>
+
+  <p>Si quieres poner en negrita la primera linea del primer parrafo, puedes encadenar los selectores <code>:first-child</code> y <code>::first-line</code>. Añade al ejemplo anterior el css siguiente. Queremos que se seleccione la primera linea del primer parrafo que este dentro de un elemento article</p>
+
+  <h2 class="h2line">Generar contenido con ::before y ::after</h2>
+
+  <p>Hay un par de pseudoelementos especiales que se utilizan junto con la propiedad de <code>content</code> para introducir contenido en el documento usando el CSS</p>
+
+  <p>Puedes utilizarlos para insertar una cadena de texto, como en el ejemplo siguiente. Intenta cambiar el valor de texto de la propiedad <code>content</code> y observa el cambio en la salida. Tambien puedes cambiar el pseudoelemento <code>::before</code> por <code>::after</code> y veras que el texto se inserta al final del elemento, en lugar de al principio.</p>
+
+  <div class="ejemplo3">
+    <p class="box">Content in the box in my HTML page.</p>
+  </div>
+
+  <p>Sin embargo, en realidad no es habitual insertar cadenas de texto desde el CSS, porque ese texto resulta inaccesible para algunos lectores de pantalla y puede ser dificil de buscar y modificar en el futuro.</p>
+
+  <p>Un uso mas adecuado de estos pseudoelementos es insertar un icono. Algo que por lo general no queremos que el lector de pantalla muestre:</p>
+
+  <p>Estos pseudoelementos tambien se utilizan con frecuencia para insertar una cadena vacia a la que luego se le puede aplicar estilo, como a cualquier otro elemento de la pagina</p>
+
+  <p>En el ejemplo siguiente hemos añadido una cadena vacia mediante el pseudoelemento <code>::before</code>. La hemos asociado a <code>display: block;</code> para poder aplicarle estilo para una anchura y una altura determinadas. A continuacion, utilizamos el css para aplicar estilo de la misma forma que lo hariamos con cualquier otro elemento. Juega con el css y cambia la forma en que se ve y se comporta.</p>
+
+  <div class="ejemplo4">
+    <p class="box2">Content in the box in my HTML page.</p>
+  </div>
 </body>
 
 </html>
