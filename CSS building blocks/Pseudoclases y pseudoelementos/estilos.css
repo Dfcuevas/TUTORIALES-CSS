@@ -1,0 +1,31 @@
+html {
+  margin: 0;
+  font-size: 10px;
+  font-family: 'Rajdhani', sans-serif;
+  word-spacing: .3rem;
+  box-sizing: border-box;
+}
+
+body {
+  width: 90%;
+  margin: 0 auto;
+}
+h1 {
+  text-align: center;
+  border-bottom: 3px solid rgb(115, 68, 228);
+}
+p {
+  font-size: 1.6rem;
+  line-height: 1.5;
+}
+#h2line {
+  display: inline-block;
+  border-bottom: 3px  solid rgb(115, 68, 228);
+}
+#span-style {
+  font-size: 1.8rem;
+  background-color: #eee;
+  display: block;
+  padding: 20px;
+  border-left: 5px solid rgb(115, 68, 228);
+}

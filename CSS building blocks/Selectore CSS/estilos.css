@@ -57,7 +57,7 @@ code {
 }
 
 .ejemplo2 li[class~="a"] {
-  color: red;
+  color: green;
 }
 
 #mayus_minus {
@@ -84,7 +84,7 @@ code {
   background-color: yellow;
 }
 
-li[class*="a"] {
+.ejemplo3 li[class*="a"] {
   color: red;
 }
 
