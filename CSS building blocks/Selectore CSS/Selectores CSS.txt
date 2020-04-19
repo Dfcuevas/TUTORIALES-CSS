@@ -1,0 +1,94 @@
+//*************************TIPOS DE SELECTORES*****************//
+
+SELECTORES DE ATRIBUTO
+
+Este grupo de selectores te proporciona diferentes formas de seleccionar elementos segun la presencia de un atributo determinado en un elemento:
+	
+	a[title] {}
+
+O incluso hacere una seleccion basada en la presencia de un atributo que tiene un valor particular asignado:
+	
+	a[href="https://example.com"] {}
+
+LAS PSEUDOCLASES Y LOS PSEUDOELEMENTOS
+
+Este grupo de selectores incluye pseudoclases, que aplican estilo a ciertos estados de un elemento. La pseudoclase :hover, por ejemplo, selecciona un elemento solo cuando se le pasa el rat�n por encima.
+
+	a:hover {}
+
+Tambien incluye pseudoelementos, que seleccionan una parte determinada de un elemento en vez del elemento en si. Por ejemplo, ::first-line siempre selecciona la primera linea del texto que se encuentra dentro de un elemento (<p>, en el ejemplo siguiente), y actua como si un elemento span hubiera delimitado la primera linea, seleccionado y aplicado estilo. 
+
+COMBINADORES
+
+El ultimo grupo de selectores combina otros selectores con el fin de delimitar elementos de nuestros documentos. El ejemplo siguiente selecciona los parrafos que son hijos directos del elemento <article> utilizando el operador de combinacion hijo (>).
+
+
+//*************************SELECTORES DE TIPO, CLASE E ID*****************//
+
+SELECTOR DE TIPO:
+
+Un selector de tipo tambien recibe el nombre de selector de nombre de etiqueta o selector de elemento porque selecciona un elemento/etiqueta HTML del documento. 
+
+EL SELECTOR UNIVERSAL:
+
+El selector universal se indica con un asterisco (*) y selecciona cualquier elemento del documento (o del elemento padre si esta encadenado con otro elemento y un operador de combinacion descendente, por ejemplo). 
+
+Uno de los usos del selector universal es facilitar la legibilidad de los selectores y clarificar sus funciones. Por ejemplo, si quiero seleccionar el primer elemento hijo de cualquier elemento <article> y poner ese elemento, cualquiera que sea en negrita, puedo utilizar el selector :first-child, como selector descendente junto con el selector de elemento <article>
+
+	article :firts-child {}
+
+Sin embargo, esto podria confundirse con article:first-child, que selecciona cualquier elemento <article> que sea el primer elemento hijo de otro elemento.
+
+Para evitar esta confusion podemos a�adir al selector :first-child el selector universal. De este modo la funcion del selector resulta obvia: seleccionara cualquier elemento que entre en la jerarquia de primer hijo de un elemento <article>
+
+	article *:first-child {}
+
+
+DELIMITACION DE CLASES EN ELEMENTOS PARTICULARES
+
+Para ello hay que anexar esa clase al selector de tipo correspondiente al elemento que queremos delimitar, sin dejar espacio entre ellos.
+
+ejemplo:   span.regla
+           h1.regla
+
+Este enfoque hace que el elemento CSS menos reutilizable porque la clase solo se aplicara a ese elemento en particular y tendras que agregar otro selector en caso que quieras que las normas tambien se apliquen a otros elementos.
+
+
+SELECTORES DE ATRIBUTO
+
+Selectores de presencia y valor.
+
+Estos selectores permiten seleccionar un elemento solo a partir de la presencia de un atributo (por ejemplo href) o a partir de varias coincidencias diferentes con respecto al valor del atributo.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

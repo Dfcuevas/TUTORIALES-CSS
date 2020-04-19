@@ -1,0 +1,81 @@
+//********************CASCADA Y HERENCIA******************************//
+
+//********************REGLAS CONFICTIVAS******************************//
+
+La cascada, y el concepto de especificidad, que está estrechamente relacionado con aquel, son mecanismos que controlan que regla se aplica cuando aparecen tales conflictos. Es posible que la regla que da estilo a tu elemento no sea la que esperas, por lo que debes comprender como funcionan estos mecanismos.
+
+Tambien es significativo el concepto de herencia, que significa que algunas propiedades CSS heredan por defecto los valores establecidos en el elemento padre, pero otras no. Esto tambien puede causar una respuesta diferente a la que esperas.
+
+
+//********************CASCADA******************************//
+
+En un primer nivel de simplicidad, la CASCADA en las hojas de estilo significa que el orden de las reglas importa en CSS: cuando dos reglas tienen la misma especificidad, se aplica la que viene de ultimo lugar en el CSS. 
+
+//********************ESPECIFICIDAD******************************//
+
+La especificidad es el modo que tiene el navegador de decidir que regla se aplica si diversas reglas tienen selectores diferentes pero podrian aplicarse a un mismo elemento. Basicamente, la espeecificidad mide cuan especifica es la seleccion de un selector.
+
+	* Un selector de elementos es menos especifico si selecciona todos los elementos de aquel tipo que aparecen en la pagina; entonces presenta una puntuacion mas baja en especificidad.
+
+	* Un selector de clase es mas especifico si selecciona solo los elementos de una pagina que tienen un valor de atributo class especifico; entonces recibe una puntuacion mayor.
+
+
+//********************HERENCIA******************************//
+
+La herencia tambien debe entenderse en este contexto: algunos valores de las propiedades CSS que se han establecido para los elementos padre los heredan los elementos hijo, pero otros no.
+Por ejemplo, si para un elemento se establece el color y el tipo de letra, cada elemento que se encuentre dentro de aquel elemento tambien se mostrara de ese color y con ee tipo de letra, a meenos que se haya aplicado un color y un tipo de letra diferentes directamente en estos. 
+
+
+//********************CONTROL DE LA HERENCIA******************************//
+
+El css proporciona cuatro valores de propiedad universal especiales para el control de la herencia. Todas las propiedades CSS aceptan estos valores.
+
+	*INHERIT: 
+Establece que el valor de la propiedad que se aplica a un elemento determinado sea exactamente igual al del elemento padre. Efectivamente, esto es herencia.
+
+	*INITIAL: 
+Establece que el valor de la propiedad que se aplica a un elemento seleccionado tenga el mismo valor que esté establecido para esa propiedad en la hoja de estilo por defecto del navegador. Si en la hoja de estilo del navegador no hay ningun valor establecido por defecto y en lugar de ello la propiedad se hereda de forma natural, entonces el valor de la propiedad se establece como inherit.
+
+	*unset:
+Restablece la propiedad a su valor natural, lo que significa que la propiedad se hereda de forma natural, actua como inherit, y en caso contrario como initial.
+
+//********************COMPRENDER EL CONCEPTO DE CASCADA******************************//
+
+Hay que considerar tres factores, que se enumeran a continuacion en orden de importancia decreciente. Los anteriores invalidan los posteriores.
+
+	1. Importancia
+	2. Especificidad
+	3. Orden en el codigo
+
+Vamos a explicar en orden ascendente para ver como los navegadores averiguan exactamente que CSS deben aplicar.
+
+ORDEN EN EL CODIGO.
+
+Ya hemos visto cómo el orden en el codigo es importante en el concepto de cascada. Si tienes más de una regla con exactamente el mismo peso, la que ocupa el ultimo lugar en el css va a ganar. Puedes entenderlo como que las reglas que estan mas cerca del elemento considerado sobreescriben las anteriores hasta que la ultima gana y da formato al elemento.
+
+ESPECIFICIDAD.
+
+Una practica comun es definir estilos genericos para los elementos basicos y luego, crear clases para los elementos que son diferentes. Por ejemplo, en la hoja de estilos que mostramos a continuacion hemos definido estilos genericos para los titulos de encabezado nivel 2; posteriormente hemos creado algunas clases que solo cambian algunas de las propiedades y los valores. Los valores definidos inicialmente se aplican a todos los encabezados, y entonces los valores mas especificos se aplican a los encabezados con las clases.
+
+!IMPORTANT
+
+Hay una pieza especial de CSS que se puede utilizar para anular los calculos anteriores, sin embargo se debe tener mucho cuidado con su uso: !important. Se utiliza para convertir una propiedad y un valor particular en el elemento mas especifico, de modo que se invalidan las reglas normales de la cascada.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

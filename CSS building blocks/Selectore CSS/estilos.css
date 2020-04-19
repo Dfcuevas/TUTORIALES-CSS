@@ -1,0 +1,122 @@
+html {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  letter-spacing: 1px;
+  word-spacing: 2px;
+  font-size: 10px;
+}
+
+body {
+  font-size: 1.5rem;
+  width: 90%;
+  margin: 0 auto;
+  margin-bottom: 15px;
+}
+
+table {
+  text-align: left;
+  border-collapse: collapse;
+  font-size: 1.6rem;
+}
+
+table th {
+  background-color: #d4dde480;
+  padding: 5px 5px;
+  border: 2px solid whitesmoke;
+}
+
+table td {
+  background-color: #d4dde440;
+  border: 2px solid white;
+  padding: 5px;
+}
+
+table caption {
+  margin-bottom: 8px;
+  ;
+}
+
+/*Reglas para el ejemplo 2*/
+code {
+  background-color: rgb(236, 229, 229);
+}
+
+.ejemplo2 {
+  font-size: 1.6rem;
+  width: 70%;
+  border: 1px solid black;
+  margin: 0 auto;
+  padding: 10px;
+}
+
+.ejemplo2 li[class] {
+  font-size: 200%;
+}
+
+.ejemplo2 li[class="a"] {
+  background-color: yellow;
+}
+
+.ejemplo2 li[class~="a"] {
+  color: red;
+}
+
+#mayus_minus {
+  padding-top: 10px;
+  border-top: 5px solid rgba(23, 143, 223, 0.712);
+}
+
+/* Reglas para el ejemplo 3*/
+
+.ejemplo3 {
+  width: 75%;
+  margin: 0 auto;
+  border: 1px solid black;
+  padding: 10px;
+  border-left: 6px solid rgba(8, 76, 133, 0.945);
+}
+
+
+.ejemplo3 li[class^="a"] {
+  font-size: 200%;
+}
+
+.ejemplo3 li[class$="a"] {
+  background-color: yellow;
+}
+
+li[class*="a"] {
+  color: red;
+}
+
+/*Reglas para el pruebalo*/
+
+.pruebalo {
+  border: 1px solid black;
+  border-radius: 5px;
+  padding: 5px 15px;
+}
+
+.pruebalo ul {
+  padding: 0;
+  list-style-type: none;
+}
+.pruebalo a {
+  display: block;
+  padding: 10px;
+  border: 5px solid grey;
+  margin-bottom: 10px;
+  text-align: center;
+  text-decoration: none;
+  font-size: 1.5rem;
+}
+.pruebalo a[title] {
+  border-color: pink;
+}
+
+.pruebalo a[href*="contact"] {
+  border-color: orange;
+}
+
+.pruebalo a[href^="https"]{
+  border-color: green;
+}

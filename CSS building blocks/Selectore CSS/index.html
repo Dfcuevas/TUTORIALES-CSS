@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Selectores CSS</title>
+    <link rel="stylesheet" href="estilos.css">
+</head>
+<header>
+    <h1>Selectores de atributo</h1>
+</header>
+
+<body>
+    <table class="sepreva">
+        <caption>Selectores de presencia y valor</caption>
+        <thead>
+            <tr>
+                <th>Selector</th>
+                <th>Ejemplo</th>
+                <th>Descripcion</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>[attr]</td>
+                <td>a[title]</td>
+                <td>Relaciona elementos con un mismo nombre de atributo, <em>attr</em> (el valor que se indica en
+                    corchetes)</td>
+            </tr>
+            <tr>
+                <td>[attr=value]</td>
+                <td>a[href="https://example.com"]</td>
+                <td>Relaciona elementos con un mismo nombre de atributo, <em>attr</em>, cuyo valor es exactamente el
+                    mismo, <em><strong>value</strong></em> (la cadena de caracteres que se indica entre corchetes)</td>
+            </tr>
+            <tr>
+                <td>[attr~=value]</td>
+                <td>p[class~="special]</td>
+                <td>Relaciona los elementos con un mismo nombre de atributo, <em>attr</em>, cuyo valor es exactamente
+                    value, o los elementos con un mismo atributo <em>attr</em> que contiene uno o mas valores de los
+                    cuales, al menos uno, coincide con value.
+                    <br>
+                    Ten en cuenta que en una lista que incluya mas de un valor, los distintos valores se separan con un
+                    espacio.</td>
+            </tr>
+            <tr>
+                <td>[attr│=value]</td>
+                <td>div[lang│="zh"]</td>
+                <td>Relaciona los elementos con un mismo nombre de atributo, <em>attr</em>, cuyo valor puede ser
+                    exactamente <em>value</em> o puede comenzar con <em>value</em> seguido inmediatamente por un guion.
+                </td>
+            </tr>
+        </tbody>
+    </table>
+
+
+    <p>En el ejemplo siguiente puedes observar como se utilizan estos selectores.</p>
+
+    <ul>
+        <li>Mediante el uso de <code>li[class]</code> podemos relacionar cualquier selector con un atributo de clase.
+            Los relaciona todos menos el primer elemento de la lista.</li>
+        <li><code>li[classs="a"]</code> relaciona un selector con una clase de <code>a</code>, pero no un selector con
+            una clase de <code>a</code> con otra clase separada por un espacio como parte del valor. Selecciona el
+            segundo elemento de la lista.</li>
+        <li><code>li[class~="a"]</code> coincidira con una clase <code>a</code> pero tambien con un valor que contenga
+            la clase de <code>a</code> como parte de una lista de elementos separados por un espacio. Selecciona el
+            segundo y el tercer elemento de la lista.</li>
+    </ul>
+    <div class="ejemplo2">
+        <h2>Attribute presence and value selectors</h2>
+        <ul>
+            <li>Item 1</li>
+            <li class="a">Item 2</li>
+            <li class="a b">Item 3</li>
+            <li class="ab">Item 4</li>
+        </ul>
+    </div>
+    <h2 id="mayus_minus">Selectores coincidentes con subcadenas</h2>
+    <p>Estos selectores permiten un tipo mas avanzado de relacion entre las subcadenas de caracteres que constituyen el
+        valor del atributo. Por ejemplo, si tienes las clases <code>box-warning</code> y <code>box-error</code> y
+        quieres encontrar todos los elementos que empiezan con la cadena de caracteres "box-", puedes seleccionarlas
+        ambas con <code>[class^="box-"]</code>.</p>
+
+
+    <table>
+        <caption>Selectores coincidentes con subcadenas</caption>
+        <thead>
+            <tr>
+                <th>Selector</th>
+                <th>Ejemplo</th>
+                <th>Descripción</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td><code>[attr^=value]</code></td>
+                <td><code>li[class^="box-"]</code></td>
+                <td>Relaciona elementos con un mismo nombre de atributo, <code>attr</code>, cuyo valor empieza
+                    exactamente con la subcadena de caracterer <code>value</code>.</td>
+            </tr>
+            <tr>
+                <td><code>[attr$=value]</code></td>
+                <td><code>li[class$="-box"]</code></td>
+                <td>Relaciona elementos con un mismo nombre de atributo, <code>attr</code>, cuyo valor termina
+                    exactamente con la subcadena de caracteres <code>value</code></td>
+            </tr>
+            <tr>
+                <td><code>[attr*= ]</code></td>
+                <td><code>li[class*="box"]</code></td>
+                <td>Relaciona elementos con un mismo nombre de atributo, <code>attr</code>, cuyo valor incluye al menos
+                    una ocurrencia de la subcadena <code>value</code> en algun punto de la cadena</td>
+            </tr>
+        </tbody>
+    </table>
+
+
+    <p>El ejemplo siguiente muestra cómo se usan estos selectores:</p>
+
+    <ul>
+        <li><code>li[class^="a"]</code> relaciona cualquier valor de atributo que empieza con <code>a</code>; luego, relaciona los dos primeros elementos de la lista se veran iguales.</li>
+        <li><code>li[class$="a"]</code> relaciona cualquier valor de atributo que termina con <code>a</code>; luego relaciona el primer y el tercer elemento de la lista</li>
+        <li><code>li[class*="a"]</code> relaciona cualquier valor de atributo que contiene <code>a</code> en cualquier posicion; luego, relaciona todos los elementos de la lista.</li>
+    </ul>
+
+    <div class="ejemplo3">
+        <h2>Attribute substring matching selectors</h2>
+
+        <ul>
+            <li class="a">Item 1</li>
+            <li class="ab">Item 2</li>
+            <li class="bca">Item 3</li>
+            <li class="bcabc">Item 4</li>
+        </ul>
+    </div>
+
+    <h2>Pruébalo</h2>
+
+    <p>En el siguiente ejemplo, usa el CSS y los selectore de atributo para: </p>
+
+    <ul>
+        <li>Seleccionar el elemento <code>a</code> con un atributo <code>title</code> y asignarle un borde de color rosa </li>
+        <li>Seleccionar el elemento <code>a</code> con un atributo <code>href</code> cuyo valor contenga la palabra <code>contact</code> el algun lugar y asignarle un borde de color naranja</li>
+        <li>Seleccionar el elemento <code>a</code> con un valor <code>href</code> cuyo valor empiece con https y asignarle un borde de color verde</li>
+    </ul>
+    <div class="pruebalo">
+        <ul>
+            <li><a href="https://example.com">Link 1</a></li>
+            <li><a href="http://example.com" title="Visit example.com">Link 2</a></li>
+            <li><a href="/contact">Link 3</a></li>
+            <li><a href="../contact/index.html">Link 4</a></li>
+        </ul>
+    </div>
+</body>
+
+</html>
