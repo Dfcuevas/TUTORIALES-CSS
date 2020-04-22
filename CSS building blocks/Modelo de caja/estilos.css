@@ -1,0 +1,23 @@
+.ejemplo1{
+  border: 1px solid black;
+  padding: 15px;
+  width: 95%;
+  margin: 0 auto;
+}
+
+.ejemplo1 p, .ejemplo1 ul {
+  border: 2px solid rebeccapurple;
+  padding: .5em;
+}
+.block, li {
+  border: 2px solid blue;
+  padding: .5em;
+  margin: .5em;
+}
+ul {
+  display: flex;
+  list-style: none;
+}
+.block {
+  display: block;
+}

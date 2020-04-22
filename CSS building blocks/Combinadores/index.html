@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link rel="stylesheet" href="estilos.css">
+  <title>Combinadores</title>
+</head>
+
+<body>
+  <h1>Combinadores</h1>
+
+  <p>Los ultimos selectores que veremos son los llamados selectores de combinacion. Se llaman asi porque combinan otros selectores de manera que proporciona una relacion util entre ellos y la ubicacion del contenido en el documento.</p>
+
+  <h2>Selector de descendientes</h2>
+
+  <p>Ya hemos visto los selectores de descendientes en articulos anteriores (selectores con espacios entre ellos).</p>
+
+  <span class="codigo"><code>body article p</code></span>
+
+  <p>Estos selectores seleccionan elementos que son descendientes de otros elementos. No es necesario que sean hijos directos.</p>
+
+  <h2>Selector de combinacion de elementos hijo.</h2>
+
+  <p>El selector de combinacion de elementos hijo es un simbolo de (mayor que) (>), que selecciona solo cuando los selectores identifican elementos que son hijos directos. Los elementos descendientes que se encuentran al final de la jerarquia, no se seleccionan. Por ejemplo, para seleccionar solo los elementos p que son hijos directos de elementos <code>article</code></p>
+
+  <span class="codigo"><code>article > p</code></span>
+
+  <h2>Hermanos adyacentes</h2>
+
+  <p>El selector de elementos hermanos adyacentes (+) se utiliza para seleccionar un elemento que se encuentre justo al lado de otro elemento en el mismo nivel de jerarquia. Por ejemplo, para seleccionar todos los elementos <code>img</code> que aparecen justo despues de elementos <code>p</code>:</p>
+
+  <span class="codigo"><code>p + img</code></span>
+
+  <p>El caso de uso mas comun es modificar el parrafo que va justo despues del titulo.. si ponemos algun elemento entre h1 y p, el estilo ya no se aplicaria a la regla, ya que no p no estaria inmediatamente despues del h1.</p>
+
+  <h2>Hermanos generales</h2>
+
+  <p>Si deseas seleccionar los hermanos de un elemento, incluso si no son directamente adyacentes, puedes utilizar el combinador de hermanos general <code>(~)</code>. Por ejemplo, para seleccionar todos los elementos <code>&lt;img&gt;</code> que aparecen despues de los elementos <code>p</code>, hacemos esto:</p>
+
+  <span class="codigo"><code>p ~ img</code></span>
+
+  <p>Este combinador funciona incluso si hay algun elemento incrustado entre los elementos referenciados en la regla. Todos los elementos img que vayan despues de p, son seleccionados, si estan en el mismo nivel de jerarquia no importanto si hay elementos distintos entre ellos.</p>
+
+</body>
+
+</html>

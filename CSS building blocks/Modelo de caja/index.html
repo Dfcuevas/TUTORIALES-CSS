@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link rel="stylesheet" href="estilos.css">
+  <title>Modelo de caja</title>
+</head>
+<body>
+<h1>Modelo de caja</h1>
+
+<h2>Ejemplo 1</h2>
+
+<div class="ejemplo1">
+  <p>Soy un parrafo corto.</p>
+  <ul>
+    <li>Item uno</li>
+    <li>Item dos</li>
+    <li>Item tres</li>
+  </ul>
+  <p>Yo soy otro parrafo. Algunas de las <span class="block">palabras</span> estan envueltas en un <span>elemento span</span></p>
+</div>
+
+<h2>El modelo de caja estandar</h2>
+
+<p>En el modelo de cajas estandar, cuando estableces los atributos width y height para una caja, definiras el ancho y alto del contenido de la caja. Cualquier area de relleno y borde se añade a este ancho y alto para obtener el tamaño total que ocupa la caja.</p>
+
+<p>El margen no se cuenta para el tamaño real de la caja; por su puesto, afecta al espacio total que la caja ocupa en la pagina, pero solo al espacio de fuera de la caja. El area de la caja se termina en el borde, no se extiende hasta el margen.</p>
+
+<h2>El modelo de cajas CSS alternativo</h2>
+
+<p>Podrias pensar que es mas bien incomodo tener que sumar el borde y el area de relleno para obtener el tamaño real de la caja, y tienes razon! Por este motivo, css introdujo un modelo de caja alternativo algun tiempo despues del modelo de cajas etandar. Con este modelo, cualquier ancho es el ancho de la caja visible en la pagina, por lo tanto, el ancho del area de contenido es ese ancho menos el alcho para el area de relleno y el borde. </p>
+
+<p>Por defecto, los navegaores usa el modelo de cajas estandar. Si deseas activar el modelo de cajas alternativo para un elemento, hazlo configurando <code>box-sizing: border-box;</code>. Con ello, le dices al navegador que tome como el borde de la caja el area definida por cualquier tamaño que establezcas.</p>
+</body>
+</html>

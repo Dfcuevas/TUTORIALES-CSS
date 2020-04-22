@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link rel="stylesheet" href="estilos.css">
+  <title>Fondos y bordes</title>
+</head>
+
+<body>
+  <h1>Fondos y bordes</h1>
+
+  <h2>Background-repeat</h2>
+
+  <p>La propiedad <code>background-repeat</code> se usa para controlar el comportamiento de tipo mosaico de las imagenes. Los valores disponibles son </p>
+
+  <ul>
+    <li><code>no-repeat</code>: evita que el fondo se repita</li>
+    <li><code>repeat-x</code>: repite horizontalmente</li>
+    <li><code>repeat-y</code>: repite verticalmente</li>
+    <li><code>repeat</code>: es el valor por defecto; repite en ambas direcciones</li>
+  </ul>
+
+  <h2>Dimensionar la imagen de fondo</h2>
+
+  <p>La propiedad <code>background-size</code>, puede tomar valores de londitud o porcentaje, para ajustar el tamaño de la imagen para que quepa dentro del fondo.</p>
+  <p>Tambien puedes utilizar palabras clave:</p>
+
+  <ul>
+    <li><code>cover</code>: El navegador agrandara la imagen lo suficientemente grande coo para que esta cubra por completo el area de la caja sin que pierda su relacion de aspecto. En este caso, es probable que parte de la imagen quede fuera de la
+      caja.</li>
+    <li><code>contain</code>: el navegador adecuara el tamaño de la imagen para que quepa dentro de la caja. En este caso, puede quedar huecos a ambos lados o en la parte superior e inferior de la imagen si la relacion de aspecto de ella es diferente
+      de la de la caja.</li>
+  </ul>
+
+  <h2>Posicionar la imagen de fondo</h2>
+
+  <p>La propiedad <code>background-position</code> te permite elegir la posicion en la que aparece la imagen de fondo dentro de la caja a la que esta asociada. Para ello se utiliza un sistema de coordenadas en el que la esquina superior izquierda de
+    la caja es <code>(0,0)</code>, y la caja se coloca sobre los ejes horizontales y verticales</p>
+
+  <p><strong>Nota:</strong> El valor predeterminado de <code>background-position</code> es <code>(0,0)</code>.</p>
+
+  <p>Se puede utilizar valores de porcentajes, pixeles, combinados, top, right, left, bottom </p>
+
+  <h2>Fondos degradados</h2>
+
+  <p>Un degradado que se usa para un fondo actua como una imagen y tambien se establece usando la propiedad <code>background-image</code>.</p>
+  <p>Puedes jugar con degradados usando uno de los muchos generadores de degradados de css que hay disponibles en la web. Puedes crear un degradado y luego copiar y pegar el codigo fuente que lo genera.</p>
+
+  <h2>Anclaje de fondo</h2>
+
+  <p>Otra opcion que hay dispoible para fondos es especificar como se desplazan cuando se desplaza el contenido. Esto se controla con la propiedad <code>background-attachment</code>, que puede tomar los valores siguientes:</p>
+
+  <ul>
+    <li><code>scroll</code>: hace que el fondo del elemento se desplace cuando te desplazas por el contenido de la pagina. Si te desplazas por el contenido del elemento, el fondo no se mueve. El efecto de ello es que el fondo esta anclado a la pagina en una posicion fija, por lo que se desplaza a medida que la pagina se desplaza.</li>
+    <li><code>fixed</code>: Hace que el fondo de un elemento quede fijo con respecto a la ventana grafica, de modo que no se desplace cuando te desplazas por la pagina o el contenido del elemento. Siempre permanece en la misma posicion de la pantalla.</li>
+    <li><code>local</code>: Este valor ancla el fondo al elemento en el que esta cofigurado, de modo que cuando te desplazas por el contenido del elemento, el fondo se desplaza con este</li>
+  </ul>
+</body>
+
+</html>

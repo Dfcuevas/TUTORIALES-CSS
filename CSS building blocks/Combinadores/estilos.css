@@ -1,0 +1,31 @@
+html{
+  font-family: sans-serif;
+  box-sizing: border-box;
+}
+*, *:before, *:after {
+  box-sizing: inherit;
+}
+body{
+  width: 90%;
+  margin: 0 auto;
+}
+h1 {
+  text-align: center;
+  border-bottom: 3px solid rgb(0, 140, 255);
+}
+p{
+  letter-spacing: .5px;
+}
+.codigo {
+  display: block;
+  background-color: #eee;
+  padding: 20px;
+  border-left: 5px solid rgb(0, 140, 255);
+  font-size: 18px;
+  font-style: italic;
+}
+code {
+  font-size: 18px;
+  background-color: #eee;
+  padding: 3px;
+}
