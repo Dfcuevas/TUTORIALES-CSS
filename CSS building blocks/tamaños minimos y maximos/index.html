@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Tamaños minimos y maximos</title>
+
+  <style>
+    .container{
+      border: 1px solid black;
+      width: 90%;
+      margin: 0 auto;
+      padding: 15px;
+    }
+    .box {
+      border: 5px solid darkblue;
+      min-height: 150px;
+      width: 200px;
+      display: inline-block;
+      margin-right: 30px;
+      font-size: 30px;
+    }
+  </style>
+</head>
+<body>
+  <h1>Tamaños minimo y maximo </h1>
+
+  <p>Ademas de asignar a las cosas un tamaño fijo, podemos pedirle al css que asigne a un elemento un tamaño minimo o maximo. Si tienes una caja que puede contener una cantidad variable de contenido y deseas que tenga siepmre al menos una altura determinada, puedes establecer la propiedad <code>min-height</code>. La cada siempre tendra al menos esta altura, pero crecera si hay mas contenido del que la caja puede contener.</p>
+
+  <p>En el ejemplo siguiente puedes ver dos cuadros, ambos con una altura definida de 150 pixeles. La caja de la izquierda tiene 150 pixeles de alto; la de la derecha contiene contenido que necesita mas espacio, por lo que su tamaño supera los 150px.</p>
+
+  <div class="container">
+    <div class="box"></div>
+    <div class="box">
+      Estas dos cajas tienen una altura minima, min-height aplicada, esta caja tiene contenido que necesita mas espacio que el asignado, y crece desde el minimo.
+    </div>
+  </div>
+
+  <p>Esto es muy util para trabajar con cantidades de contenido variables y asimismo evitar desbordamientos.</p>
+
+  <p>Un uso comun de <code>max-width</code> es para reducir el tamaño de las imagenes si no hay espacio suficiente para mostrarlas en su ancho intrinseco, al asegurarte de que no seran mayores que ese ancho.</p>
+
+  <p>A modo de ejemplo, si para una imagen tienes que establecer <code>width: 100%</code> y su ancho intrinceso es menor que su contenedor, la imagen se vera obligada a expandirse y agrandarse, y se pixelara. Si su ancho intrinseco es mayor que su contenedor, se desbordara. No es probable que desees que suceda ninguno de estos casos.</p>
+
+  <p>Si en lugar de ello usas <code>max-width: 100%</code>, la imagen puede encogerse con respecto a su tamaño intrinseco, pero no se agranda mas alla del 100% de su tamaño.</p>
+
+  <p>En el ejemplo siguiente hemos utilizado la misma imagen dos veces. la primera imagen tiene <code>width: 100%</code> y esta en un contenedor que es mas grande, por lo que se extiende hasta el ancho del contenedor. La segunda imagen tiene <code>max-width: 100%</code>, y por lo tanto, no se estira para llenar el recipiente. La tercera caja contiene la misma imagen de nuevo, tambien con max-width: 100%; pero en este caso puedes ver como se ha reducido para encajar en la caja.</p>
+</body>
+</html>

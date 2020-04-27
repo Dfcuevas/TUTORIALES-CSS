@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link rel="stylesheet" href="estilos.css">
+  <title>Contenido desbordado</title>
+</head>
+<body>
+
+  <h1>Contenido desbordado</h1>
+<p>En este capitulo veremos otro concepto importante en CSS: el <strong>desbordamiento</strong>. El desbordamiento es lo que sucede cuando hay demasiado contenido para que pueda caber comodamente en una caja.</p>
+
+<h2>¿Que es el desbordamiento?</h2>
+<p>Ya sabemos que todo en css esta dentro de una caja, y que podemos restringir el tamaño de estas cajas asignandoles los valores <code>width</code> y <code>height</code> o (<code>inline-size y block-size</code>). El desbordamiento es lo que sucede cuando hay demasiado contenido en una caja, y no cabe comodamente en ella. El CSS te proporciona vairas herramientas para administrar este desbordamiento, y ademas es un concepto que resulta util de conocer desde las primeras etapas. Te encontraras con situaciones de desbordamiento con bastante frecuencia al escribir CSS, especialmente cuando profundices en compaginacion con CSS</p>
+
+<h2>El css trata de evitar la perdida de datos</h2>
+
+<p>Vamos a comenzar con dos ejemplos que demuestran como se comporta el CSS por defecto cuando ocurre un desbordamiento.</p>
+
+<p>El primero consiste en una caja a la que se le ha restringido la dimension de bloque al darle una altura. Luego hemos añadido mas contenido del que cabe en la caja. El contenido se desborda y se distribuye desordenadamente sobre el parrafo que hay debajo de la caja.</p>
+
+<div class="ejemplo1">
+<div class="box">
+  Esta caja tiene una altura y un ancho. Esto significa que si hay mucho contenido para ser mostrado habiendole asignado una altura, va a haber una situacion de desbordamiento. Si overflow es configurado como hidden entonces ningun desbordamiento va a ser visible.
+</div>
+<p>Este contenido esta fuera de la caja.</p>
+</div>
+<br>
+<p>Te debes estar preguntando por que el CSS ha tomado por defecto el enfoque mas bien desarreglado de provocar el desbordamiento desordenado del contenido. ¿Por que no ocultar el contenido adicional o hacer crecer la caja?</p>
+
+<p>Siempre que sea posible, el css no oculta su contenido; hacerlo provocaria la perdida de datos, que generalmente es un problema. En terminos de CSS, esto significa que una parte del contenido desaparece. El problema con que desaparezca contenido es que podria ser que no notaras que ha desaparecido. Tus visitantes podrian no darse cuenta de que ha desaparecido contenido. Asi que en vez de esto, css tiende a desbordarse de un modo que sea visible. Es probable que te des cuenta de ese desarreglo, o en el peor de los casos, que un visitante de tu sitio web te informe de que una parte del contenido se soperpone y debas arreglarlo</p>
+
+
+<h2>La propiedad overflow</h2>
+
+<p>Es el modo como tomas el control del desbordamiento de un elemento y le dices al navegador como desea que se comporte. El valor predeterminado para la propiedad <code>Overflow</code> es <code>visible</code>, por lo que, de forma predeterminada vamos a poder ver cuando se desborda nuestro contenido.</p>
+<p>Si deseas cortar el contenido cuando se desborda, puedes establecer el valor <code>overflow: hidden</code> en tu caja, que hace exactamente lo que dice: ocultar el desbordamiento. Esto puede hacer que las cosas desaparezcan, por lo que solo debes utilizar esta opcion si ocultar contenido no te va a causar ningun problema.</p>
+
+<p>Quizas te gustaria añadir barras de desplazamiento cuando el contenido se desborde. Si usas <code>overflow: scroll</code>, tu navegador siempre mostrara barras de desplazamiento, incluso cuando no haya suficiente contenido para que pueda desbordarse. Es posible que desees hacer esto, porque evita que aparezcan y desaparezcan barras de desplazamiento segun el contenido.</p>
+
+<p>En el ejemplo anterior solo necesitamos desplazarnos en el eje y, y sin embargo, obtenemos barras de desplazamiento en ambos ejes. En su lugar, puedes usar la propiedad <code>overflow-y: scroll</code> para poder desplazarte solo por el eje y.</p>
+</body>
+</html>
